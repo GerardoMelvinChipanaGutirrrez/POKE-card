@@ -1,0 +1,67 @@
+{
+    "pokemon": [
+        {
+            "id": 1,
+            "name": "Bulbasaur",
+            "type": "grass",
+            "type2": "poison",
+            "height": "0.7m",
+            "weight": "6.9Kg",
+            "stats": {
+                "hp": 45,
+                "attack": 49,
+                "defense": 49,
+                "special_attack": 65,
+                "special_defense": 65,
+                "speed": 45
+            }
+        },
+        {
+            "id": 2,
+            "name": "Ivysaur",
+            "type": "grass",
+            "type2": "poison",
+            "height": "0.6m",
+            "weight": "8.5Kg",
+            "stats": {
+                "hp": 39,
+                "attack": 52,
+                "defense": 43,
+                "special_attack": 60,
+                "special_defense": 50,
+                "speed": 65
+            }
+        },
+        {
+            "id": 3,
+            "name": "Venasaur",
+            "type": "grass",
+            "type2": "poison",
+            "height": "0.6m",
+            "weight": "8.5Kg",
+            "stats": {
+                "hp": 39,
+                "attack": 52,
+                "defense": 43,
+                "special_attack": 60,
+                "special_defense": 50,
+                "speed": 65
+            }
+        },
+        {
+            "id": 4,
+            "name": "Charmander",
+            "type": "fire",
+            "height": "0.7m",
+            "weight": "6.9Kg",
+            "stats": {
+                "hp": 45,
+                "attack": 49,
+                "defense": 49,
+                "special_attack": 65,
+                "special_defense": 65,
+                "speed": 45
+            }
+        }
+    ]
+}

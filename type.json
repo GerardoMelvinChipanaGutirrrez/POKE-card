@@ -1,0 +1,108 @@
+[
+    {
+        "tipo": "normal",
+        "nombre":"normal"
+
+    },
+    {
+        "tipo": "fighting",
+        "nombre":"lucha"
+
+    },
+    {
+        "tipo": "flying",
+        "nombre":"volador"
+
+    },
+    {
+        "tipo": "poison",
+        "nombre":"veneno"
+
+    },
+    {
+        "tipo": "ground",
+        "nombre":"suelo"
+
+    },
+    {
+        "tipo": "rock",
+        "nombre":"roca"
+
+    },
+    {
+        "tipo": "bug",
+        "nombre":"bicho"
+
+    },
+    {
+        "tipo": "ghost",
+        "nombre":"fantasma"
+
+    },
+    {
+        "tipo": "steel",
+        "nombre":"acero"
+
+    },
+    {
+        "tipo": "fire",
+        "nombre":"fuego"
+
+    },
+    {
+        "tipo": "water",
+        "nombre":"agua"
+
+    },
+    {
+        "tipo": "grass",
+        "nombre":"planta"
+
+    },
+    {
+        "tipo": "electric",
+        "nombre":"electrico"
+
+    },
+    {
+        "tipo": "psychic",
+        "nombre":"psitico"
+
+    },
+    {
+        "tipo": "ice",
+        "nombre":"hielo"
+
+    },
+    {
+        "tipo": "dragon",
+        "nombre":"dragon"
+
+    },
+    {
+        "tipo": "dark",
+        "nombre":"oscuro"
+
+    },
+    {
+        "tipo": "fairy",
+        "nombre":"hada"
+
+    },
+    {
+        "tipo": "unknown",
+        "nombre":"desconocido"
+
+    },
+    {
+        "tipo": "dark",
+        "nombre":"oscuro"
+
+    },
+    {
+        "tipo": "shadow",
+        "nombre":"sombra"
+
+    }
+    
+]

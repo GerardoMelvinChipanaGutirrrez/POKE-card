@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Pokedex</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header class="container">
+			<a href="/" class="logo">
+				<img src="img/Pokédex_logo.png" alt="Logo Pokedex" />
+			</a>
+			<form>
+				<div class="form-group">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="icon-search"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+						/>
+					</svg>
+					<input
+						type="search"
+						placeholder="Buscar nombre de Pokemon"
+					/>
+				</div>
+
+				<button class="btn-search">Buscar</button>
+			</form>
+		</header>
+
+		<div class="container-filter container">
+			<div class="icon-filter">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					fill="none"
+					viewBox="0 0 24 24"
+					stroke-width="1.5"
+					stroke="currentColor"
+					class="icon"
+				>
+					<path
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						d="M10.5 6h9.75M10.5 6a1.5 1.5 0 11-3 0m3 0a1.5 1.5 0 10-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m-9.75 0h9.75"
+					/>
+				</svg>
+                <span>Filtrar</span>
+			</div>
+		</div>
+
+		<main class="card-list-pokemon container">
+			
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    fetch('./pokemon.json')
+                        .then(response => response.json())
+                        .then(data => {
+                            const contenedorProductos = document.querySelector(".card-list-pokemon");
+
+                            data.forEach(pokemon => {
+								const poke = document.createElement("a");
+                    poke.classList.add("card-pokemon");
+                    poke.setAttribute("href", `pokemon.html?id=${pokemon.numero}`);
+
+                           
+
+                                poke.innerHTML = `
+                                <div class="card-img">
+                                    <img
+                                        src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokemon.imagen}.png"
+                                        alt="pokemon ${pokemon.nombre}"
+                                    />
+                                </div>
+                                <div class="card-info">
+                                    <span class="pokemon-id">N°${pokemon.numero}</span>
+                                    <h3>${pokemon.nombre}</h3>
+                                    <div class="card-types">
+                                        <span class="${pokemon.tipo}">${pokemon.tipo}</span>
+                                        <span class="${pokemon.tipo2}">${pokemon.tipo2}</span>
+                                    </div>
+                                </div>
+                                `;
+                                contenedorProductos.appendChild(poke);
+                            });
+                        })
+                        .catch(error => console.error('Error al cargar el archivo JSON:', error));
+                });
+            </script>
+
+		</main>
+
+		<div class="container-filters">
+			<div class="filter-by-type">
+				<span class="close-filter" style="cursor: pointer;">Tipo</span>
+
+				<script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        fetch('./type.json')
+                            .then(response => response.json())
+                            .then(data => {
+                                const contenedorProductos = document.querySelector(".filter-by-type");
+    
+                                data.forEach(type => {
+                                    const article = document.createElement("div");
+                                    article.classList.add("group-type");
+    
+                                    article.innerHTML = `
+                                        <input type="checkbox" name="${type.tipo}" id="${type.tipo}">
+                                        <label for="${type.tipo}">${type.nombre}</label>
+                                    `;
+                                    contenedorProductos.appendChild(article);
+                                });
+                            })
+                            .catch(error => console.error('Error al cargar el archivo JSON:', error));
+                    });
+                </script>
+			</div>
+		</div>
+
+        <script src="main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+[
+    {
+        "numero": "1",
+        "imagen":"001",
+        "nombre": "Bulbasaur",
+        "tipo": "grass",
+        "tipo2": "poison"
+    },
+    {
+        "numero": "2",
+        "imagen":"002",
+        "nombre": "Ivysaur",
+        "tipo": "grass",
+        "tipo2": "poison"
+    },
+    {
+        "numero": "3",
+        "imagen":"003",
+        "nombre": "Venusaur",
+        "tipo": "grass",
+        "tipo2": "poison"
+    },
+    {
+        "numero": "4",
+        "imagen":"004",
+        "nombre": "Charmander",
+        "tipo": "fire",
+        "tipo2": ""
+    },
+    {
+        "numero": "5",
+        "imagen":"005",
+        "nombre": "Charmeleon",
+        "tipo": "fire",
+        "tipo2": ""
+    },
+    {
+        "numero": "6",
+        "imagen":"006",
+        "nombre": "Charizard",
+        "tipo": "fire",
+        "tipo2": "flying"
+    },
+    {
+        "numero": "7",
+        "imagen":"007",
+        "nombre": "Squirtle",
+        "tipo": "water",
+        "tipo2": ""
+    },
+    {
+        "numero": "8",
+        "imagen":"008",
+        "nombre": "Wartortle",
+        "tipo": "water",
+        "tipo2": ""
+    },
+    {
+        "numero": "9",
+        "imagen":"009",
+        "nombre": "Blastoise",
+        "tipo": "water",
+        "tipo2": ""
+    },
+    {
+        "numero": "10",
+        "imagen":"010",
+        "nombre": "Caterpie",
+        "tipo": "bug",
+        "tipo2": ""
+    },
+    {
+        "numero": "11",
+        "imagen":"011",
+        "nombre": "Metapod",
+        "tipo": "bug",
+        "tipo2": ""
+    },
+    {
+        "numero": "12",
+        "imagen":"012",
+        "nombre": "Butterfree",
+        "tipo": "bug",
+        "tipo2": "flying"
+    }
+]
