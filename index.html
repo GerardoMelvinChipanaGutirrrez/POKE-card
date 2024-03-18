@@ -59,77 +59,30 @@
 				</svg>
                 <span>Filtrar</span>
 			</div>
+			<div>
+				<span class="btn-1-gen">1 Gen</span>
+				<span class="btn-2-gen">2 Gen</span>
+				<span class="btn-3-gen">3 Gen</span>
+				<span class="btn-4-gen">4 Gen</span>
+				<span class="btn-5-gen">5 Gen</span>
+				<span class="btn-6-gen">6 Gen</span>
+				<span class="btn-7-gen">7 Gen</span>
+				<span class="btn-8-gen">8 Gen</span>
+			</div>
 		</div>
 
-		<main class="card-list-pokemon container">
-			
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    fetch('./pokemon.json')
-                        .then(response => response.json())
-                        .then(data => {
-                            const contenedorProductos = document.querySelector(".card-list-pokemon");
-
-                            data.forEach(pokemon => {
-								const poke = document.createElement("a");
-                    poke.classList.add("card-pokemon");
-                    poke.setAttribute("href", `pokemon.html?id=${pokemon.numero}`);
-
-                           
-
-                                poke.innerHTML = `
-                                <div class="card-img">
-                                    <img
-                                        src="https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${pokemon.imagen}.png"
-                                        alt="pokemon ${pokemon.nombre}"
-                                    />
-                                </div>
-                                <div class="card-info">
-                                    <span class="pokemon-id">N°${pokemon.numero}</span>
-                                    <h3>${pokemon.nombre}</h3>
-                                    <div class="card-types">
-                                        <span class="${pokemon.tipo}">${pokemon.tipo}</span>
-                                        <span class="${pokemon.tipo2}">${pokemon.tipo2}</span>
-                                    </div>
-                                </div>
-                                `;
-                                contenedorProductos.appendChild(poke);
-                            });
-                        })
-                        .catch(error => console.error('Error al cargar el archivo JSON:', error));
-                });
-            </script>
-
-		</main>
+		<main class="card-list-pokemon container"></main>
 
 		<div class="container-filters">
 			<div class="filter-by-type">
 				<span class="close-filter" style="cursor: pointer;">Tipo</span>
 
-				<script>
-                    document.addEventListener("DOMContentLoaded", function() {
-                        fetch('./type.json')
-                            .then(response => response.json())
-                            .then(data => {
-                                const contenedorProductos = document.querySelector(".filter-by-type");
-    
-                                data.forEach(type => {
-                                    const article = document.createElement("div");
-                                    article.classList.add("group-type");
-    
-                                    article.innerHTML = `
-                                        <input type="checkbox" name="${type.tipo}" id="${type.tipo}">
-                                        <label for="${type.tipo}">${type.nombre}</label>
-                                    `;
-                                    contenedorProductos.appendChild(article);
-                                });
-                            })
-                            .catch(error => console.error('Error al cargar el archivo JSON:', error));
-                    });
-                </script>
+				
 			</div>
 		</div>
 
         <script src="main.js"></script>
+		<script src="pokelist.js"></script>
+		<script src="poketipos.js"></script>
 	</body>
 </html>
