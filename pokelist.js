@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const btnsGeng = {};
 
     for (let g = 1; g <= 8; g++) {
-        btnsGeng[`btn${g}Geng`] = document.querySelector(`.btn-${g}-gen`);
+        btnsGeng[`btn${g}Geng`] = document.querySelector(`#btn-${g}-gen`);
     }
 
     let limitDown, limitUp;

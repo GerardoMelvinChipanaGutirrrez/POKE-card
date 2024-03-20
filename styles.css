@@ -108,6 +108,7 @@ header form{
 /* Btn Filter */
 .container-filter{
     display: flex;
+    justify-content: space-between;
 }
 
 .icon-filter{
@@ -393,4 +394,30 @@ Styles of Pokemon Single Page
     height: 30px;
     background-color: var(--color-primary);
     border-radius: 10px;
+}
+
+
+.gen-list{
+    display: flex;
+    border-radius: 15px;
+    align-items:center;
+
+}
+.btn-gen{
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--color-primary);
+}
+.border-1-list{
+    border-radius: 10px 0px 0px 10px;
+}
+.border-2-list{
+    border-radius: 0px 10px 10px 0px;
+}
+.btn-gen:hover{
+    background-color: var(--color-primary-hover);
+}
+.card-img img:hover{
+    transform: rotate(353deg) scale(1.2);
 }
