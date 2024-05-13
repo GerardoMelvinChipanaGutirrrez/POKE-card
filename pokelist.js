@@ -1,8 +1,16 @@
 
 document.addEventListener("DOMContentLoaded", function() {
+
+    // PUNTO DE PINTADO
     const listaPokemon = document.querySelector(".card-list-pokemon");
+
     const URL = "https://pokeapi.co/api/v2/pokemon/";
 
+    
+    // ********************
+    // CAMBIO DE GENERACION
+    // ********************
+    
     const btnsGeng = {};
 
     for (let g = 1; g <= 8; g++) {
@@ -53,23 +61,45 @@ document.addEventListener("DOMContentLoaded", function() {
     // Array to keep track of fetched Pokemon data
     const pokemonData = [];
 
+
+
+
+    // *****************
+    // FETCH DE BUSQUEDA
+    // *****************
+
+
     // Function to fetch and display Pokemon
     function fetchAndDisplayPokemon() {
         const promises = [];
         for (let i = limitDown; i <= limitUp; i++) {
-            promises.push(fetch(URL + i).then(response => response.json()));
+           promises.push(fetch(URL + i).then(response => response.json()));
         }
 
         Promise.all(promises)
-            .then(data => {
-                pokemonData.push(...data); // Push fetched Pokemon data to the array
-                // Sort the Pokemon data by ID before displaying
-                pokemonData.sort((a, b) => a.id - b.id);
-                // Display each Pokemon
-                pokemonData.forEach(poke => mostrarPokemon(poke));
-            })
+        .then(data => {
+            const filteredData = data.filter(pokemon => {
+                if (window.Miobjeto.Lista.length === 0) {
+                    return true; // Si la lista está vacía, no hay filtro, devuelve true para todos
+                } else {
+                    // Filtra los datos por los tipos presentes en window.Miobjeto.Lista
+                    const tipos = pokemon.types.map(type => type.type.name);
+                    return tipos.some(tipo => window.Miobjeto.Lista.includes(tipo));
+                }
+            });
+
+            // Sort the filtered Pokemon data by ID before displaying
+            filteredData.sort((a, b) => a.id - b.id);
+            // Display each filtered Pokemon
+            filteredData.forEach(poke => mostrarPokemon(poke));
+        })
             .catch(error => console.error('Error fetching Pokemon:', error));
     }
+
+
+    // *****************
+    // PINTADO DE CARTAS
+    // *****************
 
     function mostrarPokemon(poke) {
         const type1 = poke.types[0].type.name;

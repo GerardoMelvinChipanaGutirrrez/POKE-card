@@ -1,3 +1,4 @@
+
 const btnFilter = document.querySelector('.icon-filter')
 
 btnFilter.addEventListener('click', () => {
@@ -12,3 +13,13 @@ btnCloseFilter.addEventListener('click', () => {
 
     containerFilter.classList.toggle('active')
 })
+
+// ***********************
+// Desaclaracion de objeto
+// ***********************
+window.Miobjeto={
+    Lista:[] //DEFINIR VARIABLES DE OBJECT
+}
+document.addEventListener("DOMContentLoaded", function() {
+    window.Miobjeto.add()
+});
